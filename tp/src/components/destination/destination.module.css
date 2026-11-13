@@ -1,0 +1,64 @@
+.destination {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+
+    padding-bottom: 20px;
+
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.destination:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.titre {
+    color: #173D55;
+    margin: 18px 15px 8px;
+    font-size: 22px;
+}
+
+.pays {
+    color: #0FB9B1;
+    font-weight: bold;
+    margin: 0 15px 10px;
+}
+
+.description {
+    margin: 10px 15px;
+    line-height: 1.6;
+}
+
+
+
+
+.container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f4f7fa;
+}
+
+.title {
+  color: #123c69;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.destinations {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+}
