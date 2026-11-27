@@ -1,64 +1,156 @@
-.destination {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-
-    padding-bottom: 20px;
-
-    transition: transform 0.3s,
-                box-shadow 0.3s;
+.card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(20, 65, 110, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e8eef5;
 }
 
-.destination:hover {
-    transform: translateY(-7px);
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px rgba(20, 65, 110, 0.2);
 }
 
+/* Image de destination */
 .image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.titre {
-    color: #173D55;
-    margin: 18px 15px 8px;
-    font-size: 22px;
+.card:hover .image {
+  transform: scale(1.04);
 }
 
-.pays {
-    color: #0FB9B1;
-    font-weight: bold;
-    margin: 0 15px 10px;
+/* Contenu de la carte */
+.content {
+  padding: 20px;
 }
 
-.description {
-    margin: 10px 15px;
-    line-height: 1.6;
+.content h2 {
+  color: #123968;
+  font-size: 25px;
+  margin: 0 0 8px;
+  font-weight: 700;
 }
 
-
-
-
-.container {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #f4f7fa;
+.content p {
+  color: #536273;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 8px 0;
 }
+
+/* Prix */
+.content p:nth-of-type(2) {
+  color: #f49f20;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+/* Boutons */
+.content button {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  margin: 6px 5px 6px 0;
+}
+
+.content button:hover {
+  transform: translateY(-2px);
+}
+
+/* Bouton détails */
+.content button:first-of-type {
+  background-color: #123968;
+  color: white;
+}
+
+.content button:first-of-type:hover {
+  background-color: #0f8b8d;
+}
+
+/* Favoris */
+.favori {
+  background-color: #edf3f9;
+  color: #123968;
+}
+
+.favori:hover {
+  background-color: #ffe8e8;
+}
+
+.favoriActif {
+  background-color: #ffe1e1;
+  color: #d62828;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .image {
+    height: 190px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .content h2 {
+    font-size: 21px;
+  }
+}
+.container { padding: 50px 8%; background: #f7f8fa; }
 
 .title {
-  color: #123c69;
-  font-size: 30px;
-  margin-bottom: 30px;
+  text-align: center;
+  color: #123968;
+  font-size: 34px;
+  margin-bottom: 40px;
 }
 
 .destinations {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* même style que .card, pour le JSX qui utilise styles.destination */
+.destination {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(20, 65, 110, 0.12);
+  border: 1px solid #e8eef5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.destination:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px rgba(20, 65, 110, 0.2);
+}
+.destination:hover .image { transform: scale(1.04); }
+
+.titre { color: #123968; font-size: 25px; margin: 0 0 8px; }
+.pays { color: #536273; font-size: 15px; margin: 4px 0; }
+.description { color: #536273; font-size: 15px; line-height: 1.6; margin: 8px 0; }
+.prix { color: #f49f20; font-size: 19px; font-weight: bold; margin: 12px 0; }
+
+.bouton {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 25px;
+  background: #123968;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }

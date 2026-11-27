@@ -1,11 +1,10 @@
 .footer {
- background:
+  background:
     linear-gradient(
       rgba(18, 57, 104, 0.88),
       rgba(8, 104, 185, 0.90)
     ),
-    url("../../assets/footer.jpg");
-
+    url("./footer.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
