@@ -11,5 +11,13 @@
   "type": "commonjs",
   "dependencies": {
     "express": "^5.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ranine216/Pinky.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ranine216/Pinky/issues"
+  },
+  "homepage": "https://github.com/Ranine216/Pinky#readme"
 }
